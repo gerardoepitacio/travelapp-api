@@ -7,8 +7,8 @@ router.get('/setup', function(req, res) {
     var starterTodos = [
         {
             "postedBy": {
-                "urlImageProfile": "profileUrl",
-                "nameProfile": "Scarlett Johansson",
+                "urlImageProfile": "https://randomuser.me/api/portraits/men/14.jpg",
+                "nameProfile": "Enrique Johnson",
             },
             "isFavorite": true,
             "urlImagePlace": "https://www.mercadoeeventos.com.br/wp-content/uploads/2017/12/shutterstock_528411958-1.jpg",
@@ -18,6 +18,19 @@ router.get('/setup', function(req, res) {
             "namePlace": "Playa del carmen",
             "description": "Es una de las playas preferidas para vacacionar en la Riviera Maya, disfrutando su  fina y blanca arena bajo aguas verde-azules.",
             "totalComments": "14",
+        }, {
+            "postedBy": {
+                "urlImageProfile": "https://randomuser.me/api/portraits/women/67.jpg",
+                "nameProfile": "Sherri Shaw",
+            },
+            "isFavorite": false,
+            "urlImagePlace": "https://www.mexicodesconocido.com.mx/wp-content/uploads/2016/12/nevado-de-toluca-parque-1600.jpg",
+            "latitude": 19.1786100,
+            "longitude": -99.8211100,
+            "likes": 50,
+            "namePlace": "Nevado de Toluca",
+            "description": "Volcán mexicano ubicado en el Estado de México, entre los valles de Toluca y Tenango.",
+            "totalComments": "30",
         }
     ];
     Place.create(starterTodos, function(err, results) {
